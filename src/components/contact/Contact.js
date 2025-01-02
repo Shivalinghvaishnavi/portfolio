@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
-
+import emailjs from 'emailjs-com';
 const Contact = () => {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -34,17 +34,39 @@ const Contact = () => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+      const templateParams = {
+      username,
+      phoneNumber,
+      email,
+      subject,
+      message,
+    };
+
+    emailjs
+      .send(
+        'service_qhrxxpr', 
+        'template_787bbci', 
+        templateParams,
+        'BP3wkQIsalRn6vKJY' 
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccessMsg(`Thank you ${username}, your message has been sent successfully!`);
+          setErrMsg("");
+          setUsername("");
+          setPhoneNumber("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          setErrMsg("Failed to send your message. Please try again later.");
+        }
       );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    }
-  };
+  }
+};
   return (
     <section
       id="contact"

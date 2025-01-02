@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, tsrtcwebsite, watermelon, watermelonmobile, cbp, trieditor, projectIq } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -16,43 +16,45 @@ const Projects = () => {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
-        />
-        <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
-        />
-        <ProjectsCard
-          title="Chatting App"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        />
-        <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        />
-        <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
-        />
-        <ProjectsCard
-          title="Chatting App"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
-        />
-      </div>
+  <ProjectsCard
+    title="Watermelon Marketplace"
+    des="A feature-rich marketplace for suppliers and buyers!"
+    src={watermelon}
+    link="https://watermelon.market/suppliers/"
+  />
+    <ProjectsCard
+    title="Watermelon Marketplace"
+    des="A feature-rich marketplace for suppliers and buyers!"
+    src={watermelonmobile}
+    link="https://play.google.com/store/apps/details?id=com.watermelon.watermelonmarket&hl=en_IN"
+  />
+  <ProjectsCard
+    title="TSRTC Website"
+    des="A comprehensive platform for bus transportation services."
+    src={tsrtcwebsite}
+    link="https://tsuat.divami.com/"
+  />
+  <ProjectsCard
+    title="Cognitive Integrated Business Planning"
+    des="A next-gen solution for integrated business planning and decision-making."
+    src={cbp}
+    link="https://bylumuiportalpltna.azureedge.net/"
+  />
+  <ProjectsCard
+    title="Project IQ"
+    des="A sophisticated Jira extension that provides a comprehensive dashboard, enabling users to track total logged hours based on project, date, and persona selection."
+    src={projectIq}
+    link="https://iqqa.divami.com/"
+  />
+  <ProjectsCard
+    title="Trieditor"
+    des="An intuitive online editor for HTML, CSS, and JavaScript, allowing users to write and test code in real-time."
+    src={trieditor}
+    link="https://triedithub.netlify.app/"
+    gitLink={"https://github.com/Shivalinghvaishnavi/tri-editor"}
+  />
+</div>
+
     </section>
   );
 }
